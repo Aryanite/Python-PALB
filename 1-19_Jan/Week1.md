@@ -1,23 +1,38 @@
-School of Computer Science and Engineering
-Experiment List for Programming Ability and Logic Building - 1
+# School of Computer Science and Engineering
+## Experiment List for Programming Ability and Logic Building - 1
+
 This document contains common array problems, their Python implementations, and dedicated sections for you to insert screenshots of code execution or logic diagrams.
-1️⃣ Reverse an Array (In-Place)
-Problem: Reverse the given array by modifying it in place.
-Example: * Input: [1, 4, 3, 2, 6, 5]
-Output: [5, 6, 2, 3, 4, 1]
-Solution:
+
+---
+
+### 1️⃣ Reverse an Array (In-Place)
+**Problem:** Reverse the given array by modifying it in place.
+
+**Example:**
+- **Input:** `[1, 4, 3, 2, 6, 5]`
+- **Output:** `[5, 6, 2, 3, 4, 1]`
+
+**Solution:**
+```python
 class Solution:
     def reverseArray(self, arr):
         arr.reverse()
         return arr
+```
 
+![alt text](image.png)
 
-📸 [SCREENSHOT SPACE: REVERSE ARRAY]
-2️⃣ Find Minimum and Maximum Element
-Problem: Find the minimum and maximum elements in the array.
-Example: * Input: [1, 4, 3, 5, 8, 6]
-Output: (1, 8)
-Solution:
+---
+
+### 2️⃣ Find Minimum and Maximum Element
+**Problem:** Find the minimum and maximum elements in the array.
+
+**Example:**
+- **Input:** `[1, 4, 3, 5, 8, 6]`
+- **Output:** `(1, 8)`
+
+**Solution:**
+```python
 class Solution:
     def getMinMax(self, arr):
         minimum = arr[0]
@@ -30,49 +45,77 @@ class Solution:
                 maximum = i
 
         return minimum, maximum
+```
 
+![alt text](image-1.png)
 
-📸 [SCREENSHOT SPACE: MIN/MAX ELEMENT]
-3️⃣ Kth Smallest Element
-Problem: Find the kth smallest element based on sorted order.
-Example: * Input: arr = [10, 5, 4, 3, 48, 6, 2, 33, 53, 10], k = 4
-Output: 5
-Solution:
+---
+
+### 3️⃣ Kth Smallest Element
+**Problem:** Find the kth smallest element based on sorted order.
+
+**Example:**
+- **Input:** `arr = [10, 5, 4, 3, 48, 6, 2, 33, 53, 10], k = 4`
+- **Output:** `5`
+
+**Solution:**
+```python
 class Solution:
     def kthSmallest(self, arr, k):
         arr.sort()
         return arr[k - 1]
+```
 
+![alt text](image-2.png)
 
-📸 [SCREENSHOT SPACE: KTH SMALLEST]
-4️⃣ Union of Two Arrays
-Problem: Return all distinct elements present in either array.
-Example: * Input: a = [1, 2, 3, 2, 1], b = [3, 2, 2, 3, 3, 2]
-Output: [1, 2, 3]
-Solution:
+---
+
+### 4️⃣ Union of Two Arrays
+**Problem:** Return all distinct elements present in either array.
+
+**Example:**
+- **Input:** `a = [1, 2, 3, 2, 1], b = [3, 2, 2, 3, 3, 2]`
+- **Output:** `[1, 2, 3]`
+
+**Solution:**
+```python
 class Solution:
     def findUnion(self, a, b):
         return sorted(set(a) | set(b))
+```
 
+![alt text](image-3.png)
 
-📸 [SCREENSHOT SPACE: UNION OF ARRAYS]
-5️⃣ Largest Element in Array
-Problem: Find the largest element.
-Example: * Input: [1, 8, 7, 56, 90]
-Output: 90
-Solution:
+---
+
+### 5️⃣ Largest Element in Array
+**Problem:** Find the largest element.
+
+**Example:**
+- **Input:** `[1, 8, 7, 56, 90]`
+- **Output:** `90`
+
+**Solution:**
+```python
 class Solution:
     def largest(self, arr):
         arr.sort()
         return arr[-1]
+```
 
+![alt text](image-4.png)
 
-📸 [SCREENSHOT SPACE: LARGEST ELEMENT]
-6️⃣ Rotate Array by One (Clockwise)
-Problem: Rotate the array by one position in clockwise direction.
-Example: * Input: [1, 2, 3, 4, 5]
-Output: [5, 1, 2, 3, 4]
-Solution:
+---
+
+### 6️⃣ Rotate Array by One (Clockwise)
+**Problem:** Rotate the array by one position in clockwise direction.
+
+**Example:**
+- **Input:** `[1, 2, 3, 4, 5]`
+- **Output:** `[5, 1, 2, 3, 4]`
+
+**Solution:**
+```python
 class Solution:
     def rotate(self, arr):
         n = len(arr)
@@ -84,14 +127,21 @@ class Solution:
 
         arr[0] = last
         return arr
+```
 
+![alt text](image-5.png)
 
-📸 [SCREENSHOT SPACE: ROTATE ARRAY]
-7️⃣ Maximum Subarray Sum (Kadane’s Algorithm)
-Problem: Find the maximum sum of a continuous subarray.
-Example: * Input: [2, 3, -8, 7, -1, 2, 3]
-Output: 11
-Solution:
+---
+
+### 7️⃣ Maximum Subarray Sum (Kadane’s Algorithm)
+**Problem:** Find the maximum sum of a continuous subarray.
+
+**Example:**
+- **Input:** `[2, 3, -8, 7, -1, 2, 3]`
+- **Output:** `11`
+
+**Solution:**
+```python
 class Solution:
     def maxSubarraySum(self, arr):
         current_sum = arr[0]
@@ -102,14 +152,21 @@ class Solution:
             max_sum = max(max_sum, current_sum)
 
         return max_sum
+```
 
+![alt text](image-6.png)
 
-📸 [SCREENSHOT SPACE: KADANE'S ALGORITHM]
-8️⃣ Search Insert Position (Binary Search)
-Problem: Return index if target exists; otherwise return insertion position.
-Example: * Input: nums = [1, 3, 5, 6], target = 5
-Output: 2
-Solution:
+---
+
+### 8️⃣ Search Insert Position (Binary Search)
+**Problem:** Return index if target exists; otherwise return insertion position.
+
+**Example:**
+- **Input:** `nums = [1, 3, 5, 6], target = 5`
+- **Output:** `2`
+
+**Solution:**
+```python
 from typing import List
 
 class Solution:
@@ -127,14 +184,21 @@ class Solution:
                 right = mid - 1
 
         return left
+```
 
+![alt text](image-7.png)
 
-📸 [SCREENSHOT SPACE: BINARY SEARCH]
-9️⃣ Two Sum
-Problem: Find indices of two numbers whose sum equals the target.
-Example: * Input: nums = [2, 7, 11, 15], target = 9
-Output: [0, 1]
-Solution:
+---
+
+### 9️⃣ Two Sum
+**Problem:** Find indices of two numbers whose sum equals the target.
+
+**Example:**
+- **Input:** `nums = [2, 7, 11, 15], target = 9`
+- **Output:** `[0, 1]`
+
+**Solution:**
+```python
 from typing import List
 
 class Solution:
@@ -148,14 +212,21 @@ class Solution:
                 return [prevMap[diff], i]
             prevMap[n] = i
         return []
+```
 
+![alt text](image-8.png)
 
-📸 [SCREENSHOT SPACE: TWO SUM]
-🔟 Minimum Number of Jumps to Reach End
-Problem: Each element represents maximum jump length from that position. Return minimum jumps needed to reach the last index.
-Example: * Input: [1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9]
-Output: 3
-Solution:
+---
+
+### 🔟 Minimum Number of Jumps to Reach End
+**Problem:** Each element represents maximum jump length from that position. Return minimum jumps needed to reach the last index.
+
+**Example:**
+- **Input:** `[1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9]`
+- **Output:** `3`
+
+**Solution:**
+```python
 class Solution:
     def minJumps(self, arr):
         n = len(arr)
@@ -183,6 +254,8 @@ class Solution:
                 step = maxReach - i
 
         return -1
+```
 
 
-📸 [SCREENSHOT SPACE: MINIMUM JUMPS]
+
+
